@@ -10,16 +10,16 @@ $(document).ready(function(){
     xhr.setRequestHeader("X-Mashape-Authorization", "dNnULvXBm5mshHJ6MJqtHYoa98Bop16nooWjsnhv9HCEBHvpy5"); // Enter here your Mashape key
     }
 }); */
-    $.ajax({
+$.ajax({
     headers: {
       "X-Mashape-Key": "dNnULvXBm5mshHJ6MJqtHYoa98Bop16nooWjsnhv9HCEBHvpy5",
-      Accept: "application/json",
+      Accept: "text/plain",
       "Content-Type": "application/x-www-form-urlencoded"
     },
-      url: 'https://simple-weather.p.mashape.com/weatherdata?lat=26.8467&lng=80.9462',
-      success: function(r) {
+    url: 'https://simple-weather.p.mashape.com/weather?lat=26.8467&lng=80.9462',
+    success: function(r) {
         document.getElementById('weather').innerHTML = r;
-      },
-        error: function(err) { alert(err); }
-});
+    },
+    error: function(err) { alert(err); }
+    });
 });
