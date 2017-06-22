@@ -10,16 +10,24 @@ $(document).ready(function(){
     xhr.setRequestHeader("X-Mashape-Authorization", "dNnULvXBm5mshHJ6MJqtHYoa98Bop16nooWjsnhv9HCEBHvpy5"); // Enter here your Mashape key
     }
 }); */
-$.ajax({
-    headers: {
-      "X-Mashape-Key": "dNnULvXBm5mshHJ6MJqtHYoa98Bop16nooWjsnhv9HCEBHvpy5",
-      Accept: "text/plain",
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
-    url: 'https://simple-weather.p.mashape.com/weather?lat=26.8467&lng=80.9462',
-    success: function(r) {
-        document.getElementById('weather').innerHTML = r;
-    },
-    error: function(err) { alert(err); }
+    
+    
+    var link = navigator.geolocation.getCurrentPosition(function(position) {
+        return 'https://simple-weather.p.mashape.com/weather?lat=' + position.coords.latitude + '&lng=' +  position.coords.longitude;
+    });
+    
+    console.log(link);
+    
+    $.ajax({
+        headers: {
+          "X-Mashape-Key": "dNnULvXBm5mshHJ6MJqtHYoa98Bop16nooWjsnhv9HCEBHvpy5",
+          Accept: "text/plain",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        url: link,
+        success: function(r) {
+            document.getElementById('weather').innerHTML = r;
+        },
+        error: function(err) { alert(err); }
     });
 });
