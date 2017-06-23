@@ -110,7 +110,8 @@ function getIcon(condid) {
 
 function obtainHtml(data){
     var i = data.query.results.channel.item.condition;
-    return i.temp + ' ' + i.text + ' ' + getIcon(i.code);
+    var j = data.query.results.channel;
+    return 'Showing weather at: ' + j.location.city + '<br><div class="details">' + i.temp + ' <sup>o</sup> ' + j.units.temperature + '<br>' + i.text + '</div>' + '<div class = "weaicon">' + getIcon(i.code) + '</div>';
 }
 
 function getPosition(position) {
