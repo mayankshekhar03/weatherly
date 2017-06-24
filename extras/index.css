@@ -22,12 +22,12 @@ h1 {
     font-size: 4em;
 }
 
-.tiny {
+.tiny1 {
     width: 14.2%;
     float: left;
     text-align: center;
 }
 
-.tiny > i {
+.tiny1 > i {
     font-size: 2em;
 }

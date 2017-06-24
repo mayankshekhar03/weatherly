@@ -108,12 +108,16 @@ function getIcon(condid) {
     return icon;
 }
 
-function obtainHtml(data){
+function editHtml(data){
     var i = data.query.results.channel.item.condition;
     var j = data.query.results.channel;
-    var temperature = 'Showing weather at: ' + j.location.city + '<br><div class="details">' + i.temp + ' <sup>o</sup> ' + j.units.temperature + '<br>' + i.text + '</div>' + '<div class = "weaicon">' + getIcon(i.code) + '</div>';
-    var details = '<br><br><div class = "tiny">' + getIcon(j['item']['forecast'][1]['code']) + '</div>';
-    return temperature + details;
+    var k = j['item']['forecast'];
+    $('#city').html(j.location.city); 
+    $('#temp0').html(i.temp);
+    $('.unit').html(j.units.temperature);
+    $('#text').html(i.text);
+    $('.weaicon').html(getIcon(i.code));
+    $('.tiny1').html(getIcon(j['item']['forecast'][1]['code']));
 }
 
 function getPosition(position) {
@@ -127,8 +131,7 @@ function getPosition(position) {
         url: l,
         success: function(r) {
             var rjson = JSON.parse(r);
-            var response = obtainHtml(rjson);
-            document.getElementById('weather').innerHTML = response;
+            editHtml(rjson);
         },
         error: function(err) { alert(err); }
     });
