@@ -117,7 +117,9 @@ function editHtml(data){
     $('.unit').html(j.units.temperature);
     $('#text').html(i.text);
     $('.weaicon').html(getIcon(i.code));
-    $('.tiny1').html(getIcon(j['item']['forecast'][1]['code']));
+    $('#we1').html(getIcon(j['item']['forecast'][1]['code']));
+    $('#temp1-h').html(j['item']['forecast'][1]['high']);
+    $('#temp1-l').html(j['item']['forecast'][1]['low']);
 }
 
 function getPosition(position) {
