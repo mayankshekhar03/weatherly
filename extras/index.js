@@ -176,8 +176,17 @@ function changeBg(code) {
             $('body').css('background-image', 'url(images/thunderstorm.jpg)');
             break;
         case '3':
+        case '47':
             $('body').css('background-image', 'url(images/sthunderstorm.jpg)');
             break;
+        case '11':
+        case '12':
+            $('body').css('background-image', 'url(images/rain.jpg)');
+            break;
+        case '1':
+            $('body').css('background-image', 'url(images/tstorm.jpg)');
+            break;
+        
         default:
             break;
     }
