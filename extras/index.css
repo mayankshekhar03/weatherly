@@ -6,39 +6,77 @@ h1 {
     text-align: center;
 }
 
-#weather {
-    margin: 0 auto;
-    max-width: 600px;
-    background-color: dodgerblue;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.5em;
-    position: relative;
-    overflow: auto;
+@media screen and (min-width: 1000px) {
+    #weather {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: dodgerblue;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1.5em;
+        position: relative;
+        overflow: auto;
+    }
+
+    .weaicon {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        font-size: 4em;
+    }
+
+    .tiny {
+        width: 14.2%;
+        float: left;
+        text-align: center;
+    }
+
+    #we1, #we2, #we3, #we4, #we5, #we6, #we7  {
+        font-size: 1.7em;
+        padding-bottom: 10px;
+    }
+
+    button {
+        border: none;
+        font-size: inherit;
+        color: white;
+        background-color: transparent;
+    }
 }
 
-.weaicon {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    font-size: 4em;
-}
-
-.tiny {
-    width: 14.2%;
-    float: left;
-    text-align: center;
-}
-
-#we1, #we2, #we3, #we4, #we5, #we6, #we7  {
-    font-size: 1.7em;
-    padding-bottom: 10px;
-}
-
-button {
-    border: none;
-    font-size: inherit;
-    color: white;
-    background-color: dodgerblue;
+@media screen and (max-width: 999px) {
+    body {
+        background-color: dodgerblue;
+        color: white;
+    }
+    button {
+        border: none;
+        font-size: inherit;
+        color: white;
+        background-color: transparent;
+        
+    }
+    .tiny {
+        padding: 10px;
+        border: 3px dotted;
+    }
+    h5 {
+        padding-top: 40px;
+    }
+    #weather {
+        padding: 10px;
+        text-align: center;
+        font-size: 3em;
+        z-index: 4;
+    }
+    
+    .weaicon {
+        position: absolute;
+        top: 220px;
+        right: 20px;
+        font-size: 4em;
+        color: darkblue;
+        z-index: -2;
+    }
 }
