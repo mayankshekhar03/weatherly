@@ -11,12 +11,23 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     font-size: 1.5em;
-    position: relative
+    position: relative;
+    overflow: auto;
 }
 
 .weaicon {
     position: absolute;
-    top: 10px;
+    top: 30px;
     right: 10px;
     font-size: 4em;
+}
+
+.tiny {
+    width: 14.2%;
+    float: left;
+    text-align: center;
+}
+
+.tiny > i {
+    font-size: 2em;
 }

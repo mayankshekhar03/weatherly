@@ -111,7 +111,9 @@ function getIcon(condid) {
 function obtainHtml(data){
     var i = data.query.results.channel.item.condition;
     var j = data.query.results.channel;
-    return 'Showing weather at: ' + j.location.city + '<br><div class="details">' + i.temp + ' <sup>o</sup> ' + j.units.temperature + '<br>' + i.text + '</div>' + '<div class = "weaicon">' + getIcon(i.code) + '</div>';
+    var temperature = 'Showing weather at: ' + j.location.city + '<br><div class="details">' + i.temp + ' <sup>o</sup> ' + j.units.temperature + '<br>' + i.text + '</div>' + '<div class = "weaicon">' + getIcon(i.code) + '</div>';
+    var details = '<br><br><div class = "tiny">' + getIcon(j['item']['forecast'][1]['code']) + '</div>';
+    return temperature + details;
 }
 
 function getPosition(position) {
