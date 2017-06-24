@@ -79,4 +79,8 @@ h1 {
         color: darkblue;
         z-index: -2;
     }
+    #temp0, #unit0 {
+        font-size: 3em;
+    }
+    
 }
