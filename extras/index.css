@@ -87,7 +87,7 @@ body {
     .weaicon {
         padding: 20px;
         font-size: 3em;
-        color: darkblue;
+        text-shadow: 0px 0px 5px black;
     }
     #temp0, #unit0 {
         font-size: 3em;
