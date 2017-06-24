@@ -116,6 +116,9 @@ function editHtml(data){
     $('#temp0').html(i.temp);
     temp0 = i.temp;
     unit  = j.units.temperature;
+    weacode  =  i.code;
+    console.log(weacode);
+    changeBg(weacode);
     $('#unit0').html(j.units.temperature);
     $('.unit').html(j.units.temperature);
     $('#text').html(i.text);
@@ -160,6 +163,26 @@ function getPosition(position) {
         error: function(err) { alert(err); }
     });
 }
+
+function changeBg(code) {
+    switch(code) {
+        case '34':
+            $('body').css('background-image', 'url(images/fairday.jpg)');
+            break;
+        case '33':
+            $('body').css('background-image', 'url(images/fairnight.jpg)');
+            break;
+        case '4':
+            $('body').css('background-image', 'url(images/thunderstorm.jpg)');
+            break;
+        case '3':
+            $('body').css('background-image', 'url(images/sthunderstorm.jpg)');
+            break;
+        default:
+            break;
+    }
+}
+
 $(document).ready(function(){
     getLink();
     $('.temp-toggle').click(function(){
