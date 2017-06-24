@@ -151,7 +151,7 @@ function getPosition(position) {
         },
         url: l,
         success: function(r) {
-            var rjson = JSON.parse(r);
+            rjson = JSON.parse(r);
             editHtml(rjson);
         },
         error: function(err) { alert(err); }
