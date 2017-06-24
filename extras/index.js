@@ -120,6 +120,25 @@ function editHtml(data){
     $('#we1').html(getIcon(j['item']['forecast'][1]['code']));
     $('#temp1-h').html(j['item']['forecast'][1]['high']);
     $('#temp1-l').html(j['item']['forecast'][1]['low']);
+    $('#we2').html(getIcon(j['item']['forecast'][2]['code']));
+    $('#temp2-h').html(j['item']['forecast'][2]['high']);
+    $('#temp2-l').html(j['item']['forecast'][2]['low']);
+    $('#we3').html(getIcon(j['item']['forecast'][3]['code']));
+    $('#temp3-h').html(j['item']['forecast'][3]['high']);
+    $('#temp3-l').html(j['item']['forecast'][3]['low']);
+    $('#we4').html(getIcon(j['item']['forecast'][4]['code']));
+    $('#temp4-h').html(j['item']['forecast'][4]['high']);
+    $('#temp4-l').html(j['item']['forecast'][4]['low']);
+    $('#we5').html(getIcon(j['item']['forecast'][5]['code']));
+    $('#temp5-h').html(j['item']['forecast'][5]['high']);
+    $('#temp5-l').html(j['item']['forecast'][5]['low']);
+    $('#we6').html(getIcon(j['item']['forecast'][6]['code']));
+    $('#temp6-h').html(j['item']['forecast'][6]['high']);
+    $('#temp6-l').html(j['item']['forecast'][6]['low']);
+    $('#we7').html(getIcon(j['item']['forecast'][7]['code']));
+    $('#temp7-h').html(j['item']['forecast'][7]['high']);
+    $('#temp7-l').html(j['item']['forecast'][7]['low']);
+    
 }
 
 function getPosition(position) {
