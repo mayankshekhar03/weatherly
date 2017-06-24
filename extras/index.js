@@ -117,7 +117,6 @@ function editHtml(data){
     temp0 = i.temp;
     unit  = j.units.temperature;
     weacode  =  i.code;
-    console.log(weacode);
     changeBg(weacode);
     $('#unit0').html(j.units.temperature);
     $('.unit').html(j.units.temperature);
@@ -170,6 +169,7 @@ function changeBg(code) {
             $('body').css('background-image', 'url(images/fairday.jpg)');
             break;
         case '33':
+        case '31':
             $('body').css('background-image', 'url(images/fairnight.jpg)');
             break;
         case '4':
@@ -186,7 +186,38 @@ function changeBg(code) {
         case '1':
             $('body').css('background-image', 'url(images/tstorm.jpg)');
             break;
-        
+        case '0':
+        case '2':
+            $('body').css('background-image', 'url(images/tornado.jpg)');
+            break;
+        case '6':
+        case '7':
+        case '5':
+        case '10':
+        case '13':
+        case '14':
+        case '15':
+        case '16':
+        case '17':
+        case '18':
+            $('body').css('background-image', 'url(images/mss.jpg)');
+            break;
+        case '8':
+        case '9':
+            $('body').css('background-image', 'url(images/fd.jpg)');
+            break;
+        case '19':
+            $('body').css('background-image', 'url(images/dust.png)');
+            break;
+        case '20':
+            $('body').css('background-image', 'url(images/dust.png)');
+            break;
+        case '21':
+            $('body').css('background-image', 'url(images/haze.jpg)');
+            break;
+        case '22':   
+            $('body').css('background-image', 'url(images/smoky.png)');
+            break;
         default:
             break;
     }
