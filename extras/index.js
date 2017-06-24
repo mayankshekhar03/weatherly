@@ -166,6 +166,11 @@ function getPosition(position) {
 function changeBg(code) {
     switch(code) {
         case '34':
+        case '26':
+        case '28':
+        case '30':
+        case '32':
+        case '44':
             $('body').css('background-image', 'url(images/fairday.jpg)');
             break;
         case '33':
@@ -173,6 +178,10 @@ function changeBg(code) {
             $('body').css('background-image', 'url(images/fairnight.jpg)');
             break;
         case '4':
+        case '37':
+        case '38':
+        case '39':
+        case '45':
             $('body').css('background-image', 'url(images/thunderstorm.jpg)');
             break;
         case '3':
@@ -181,6 +190,7 @@ function changeBg(code) {
             break;
         case '11':
         case '12':
+        case '40':
             $('body').css('background-image', 'url(images/rain.jpg)');
             break;
         case '1':
@@ -200,10 +210,16 @@ function changeBg(code) {
         case '16':
         case '17':
         case '18':
+        case '35':
+        case '41':
+        case '42':
+        case '43':
+        case '46':
             $('body').css('background-image', 'url(images/mss.jpg)');
             break;
         case '8':
         case '9':
+        case '25':
             $('body').css('background-image', 'url(images/fd.jpg)');
             break;
         case '19':
@@ -218,7 +234,19 @@ function changeBg(code) {
         case '22':   
             $('body').css('background-image', 'url(images/smoky.png)');
             break;
+        case '23':
+        case '24':
+            $('body').css('background-image', 'url(images/windy.jpg)');
+            break;
+        case '27':
+        case '29':
+            $('body').css('background-image', 'url(images/cloudynight.jpg)');
+            break;
+        case '36':
+            $('body').css('background-image', 'url(images/hot.jpg)');
+            break;
         default:
+            $('body').css('background-image', 'url(images/rain.jpg)');
             break;
     }
 }
