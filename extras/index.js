@@ -114,6 +114,9 @@ function editHtml(data){
     var k = j['item']['forecast'];
     $('#city').html(j.location.city); 
     $('#temp0').html(i.temp);
+    temp0 = i.temp;
+    unit  = j.units.temperature;
+    $('#unit0').html(j.units.temperature);
     $('.unit').html(j.units.temperature);
     $('#text').html(i.text);
     $('.weaicon').html(getIcon(i.code));
@@ -159,4 +162,17 @@ function getPosition(position) {
 }
 $(document).ready(function(){
     getLink();
+    $('.temp-toggle').click(function(){
+        if (unit == 'C'){
+            temp0 = (temp0 * 9/5) + 32;
+            unit  = 'F';
+            $('#temp0').html(temp0);
+            $('#unit0').html(unit);
+        }else if (unit == 'F') {
+            temp0 = (temp0 - 32) * 5/9;
+            unit = 'C';
+            $('#temp0').html(temp0);
+            $('#unit0').html(unit);
+        }
+    });
 });
